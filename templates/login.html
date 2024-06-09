@@ -1,0 +1,43 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}Login{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="card">
+        <div class="card-body text-left">
+            <h2 class="card-title text-left mb-4">Welcome Back!</h2>
+            {% if error %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+            {% endif %}
+            <form method="POST" action="/login" class="needs-validation" novalidate>
+                {{ form.hidden_tag() }}
+                <div class="form-floating mb-3">
+                    {{ wtf.form_field(form.username, class_="form-control", placeholder="Username", id="username", autocomplete="off") }}
+                    <label for="username">Username</label>
+                </div>
+                <div class="form-floating mb-3">
+                    {{ wtf.form_field(form.password, class_="form-control", placeholder="Password", id="password") }}
+                    <label for="password">Password</label>
+                </div>
+                <div class="form-check mb-3">
+                    {{ wtf.form_field(form.remember, class_="form-check-input", id="remember") }}
+                    
+                </div>
+                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            </form>
+            <div class="text-center mt-3">
+                <small><a href="#">Forgot your password?</a></small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

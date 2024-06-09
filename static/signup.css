@@ -1,0 +1,79 @@
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Card */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff; /* Light background */
+}
+
+.card-body {
+  padding: 2.5rem;
+}
+
+.card-title {
+  font-size: 26px;
+  color: #333333;
+  margin-bottom: 30px;
+  text-align: left; /* Align the text to the left */
+}
+
+/* Form styling */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  text-align: left; /* Align the text to the left */
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%; /* Ensures button expands to full width of the form */
+  background-color: #007bff; /* Primary button color */
+  border: 1px solid #007bff;
+  color: #ffffff; /* Text color */
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover for visual feedback */
+  border-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card {
+      width: 90%; /* Reduce card width on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .card-body {
+      padding: 2rem;
+  }
+  .card-title {
+      font-size: 22px;
+  }
+  .form-control,
+  .btn-primary {
+      font-size: 14px;
+      padding: 10px;
+  }
+}

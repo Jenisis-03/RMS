@@ -1,0 +1,224 @@
+/* starter-template.css */
+
+/* Add your custom CSS styles here */
+
+/* Responsive footer for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    position: static; /* Change position to static for smaller screens */
+    width: 100%; /* Make the footer cover the entire width */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .search-section,
+  .pnr-status-section,
+  .blog-section .card {
+    margin-bottom: 20px;
+  }
+}
+
+/* General styles */
+body {
+  padding-top: 70px; /* Increased padding for the fixed navbar */
+}
+
+.starter-template {
+  padding: 40px 15px; /* Padding for the content area */
+  text-align: center; /* Center-align text within the content area */
+}
+
+/* Footer */
+.footer {
+  position: fixed; /* Position the footer at the bottom of the viewport */
+  width: 100%; /* Full width */
+  bottom: 0; /* Stick to the bottom */
+  background-color: #222; /* Dark background color */
+  color: white; /* White text */
+  line-height: 50px; /* Adjust the height */
+}
+
+/* Navbar styles */
+.navbar-inverse {
+  background-color: #343a40; /* Dark grey background */
+  border-color: #343a40; /* Border color */
+}
+
+.navbar-inverse .navbar-brand {
+  color: #ffffff; /* White text for brand */
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff; /* White text for links */
+}
+
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background-color: #212529; /* Dark grey background for active link */
+}
+
+/* Gallery section styles */
+.gallery-section {
+  margin-bottom: 50px;
+}
+
+/* Search section styles */
+.search-section {
+  margin-bottom: 50px;
+}
+
+.search-section h2 {
+  margin-bottom: 30px;
+}
+
+.search-section .card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.search-section .card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.search-section .card-body {
+  padding: 30px;
+}
+
+.search-section .form-group {
+  margin-bottom: 25px;
+}
+
+.search-section label {
+  font-weight: bold;
+}
+
+.search-section input[type="text"] {
+  border-radius: 25px;
+}
+
+.search-section button[type="submit"] {
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* Blog section styles */
+.blog-section {
+  margin-bottom: 50px;
+}
+
+.blog-section h2 {
+  margin-bottom: 30px;
+}
+
+.blog-section .card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.blog-section .card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.blog-section .card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 250px; /* Increased height of blog card images */
+  object-fit: cover; /* Ensure images cover the card area */
+}
+
+.blog-section .card-body {
+  padding: 30px;
+}
+
+.blog-section .card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.blog-section .card-text {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.blog-section .btn-primary {
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* Custom media query for smaller screens */
+@media (max-width: 768px) {
+  .footer {
+    position: static; /* Change position to static for smaller screens */
+    width: 100%; /* Make the footer cover the entire width */
+  }
+}
+/* PNR Status section styles */
+.pnr-status-section {
+  margin-bottom: 50px;
+}
+
+.pnr-status-section h2 {
+  margin-bottom: 30px;
+}
+
+.pnr-status-section .card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.pnr-status-section .card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.pnr-status-section .card-body {
+  padding: 30px;
+}
+
+.pnr-status-section .form-group {
+  margin-bottom: 25px;
+}
+
+.pnr-status-section label {
+  font-weight: bold;
+}
+
+.pnr-status-section input[type="text"] {
+  border-radius: 25px;
+}
+
+.pnr-status-section button[type="submit"] {
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+/* Animation for PNR input field */
+@keyframes inputBounce {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+.pnr-status-section input[type="text"] {
+  animation: inputBounce 1s infinite; /* Apply animation */
+}
+
+/* Animation for Check Status button */
+@keyframes buttonPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pnr-status-section button[type="submit"] {
+  animation: buttonPulse 1s infinite; /* Apply animation */
+}

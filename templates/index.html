@@ -1,0 +1,134 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}
+Yatri Rail Sathi
+{% endblock %}
+
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='starter-template.css') }}">
+<style>
+  /* Responsive footer for smaller screens */
+  @media (max-width: 768px) {
+    .footer {
+      position: static; /* Change position to static for smaller screens */
+      width: 100%; /* Make the footer cover the entire width */
+    }
+  }
+  /* Adjustments for smaller screens */
+  @media (max-width: 768px) {
+    .search-section,
+    .pnr-status-section,
+    .blog-section .card {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Yatri Rail Sathi</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+<div class="container">
+    <section class="search-section">
+        <h2 class="text-center mb-4">Search Trains</h2>
+        <div class="card">
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="departure">Departure Station</label>
+                        <input type="text" class="form-control" id="departure" placeholder="Enter Departure Station">
+                    </div>
+                    <div class="form-group">
+                        <label for="arrival">Arrival Station</label>
+                        <input type="text" class="form-control" id="arrival" placeholder="Enter Arrival Station">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Search</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- PNR Status Section -->
+    <section class="pnr-status-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Check PNR Status</h2>
+            <div class="card">
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="pnr">Enter PNR Number</label>
+                            <input type="text" class="form-control" id="pnr" placeholder="Enter PNR Number">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Check Status</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="text-center mb-4">Railway Blogs</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="blog_image_1.jpg" class="card-img-top" alt="Blog Image 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Title 1</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="blog_image_2.jpg" class="card-img-top" alt="Blog Image 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Title 2</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="blog_image_3.jpg" class="card-img-top" alt="Blog Image 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Blog Title 3</h5>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <a href="#" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div><!-- /.container -->
+
+<footer class="footer bg-dark text-white mt-4">
+    <div class="container text-center py-3">
+        <p class="mb-0">© Created by Jenisis</p>
+    </div>
+</footer>
+
+{% endblock %}
