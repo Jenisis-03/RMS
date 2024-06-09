@@ -22,11 +22,11 @@
                 {{ form.hidden_tag() }}
                 <div class="form-floating mb-3">
                     {{ wtf.form_field(form.username, class_="form-control", placeholder="Username", id="username", autocomplete="off") }}
-                    <label for="username">Username</label>
+                    
                 </div>
                 <div class="form-floating mb-3">
                     {{ wtf.form_field(form.password, class_="form-control", placeholder="Password", id="password") }}
-                    <label for="password">Password</label>
+                    
                 </div>
                 <div class="form-check mb-3">
                     {{ wtf.form_field(form.remember, class_="form-check-input", id="remember") }}
